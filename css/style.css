@@ -536,6 +536,7 @@ mark,
 .img-fluid {
   max-width: 100%;
   max-height: 5%;
+  border-radius: 15%;
 }
 
 .img-thumbnail {
@@ -10084,6 +10085,7 @@ h6,
   border-radius: 200px;
   transition: .5s;
   z-index: 2;
+  
 }
 
 .team-item:hover .team-img::after {
@@ -10091,6 +10093,7 @@ h6,
   right: -3px;
   bottom: -3px;
   left: -3px;
+ 
 }
 
 .team-item .team-img img {
@@ -10099,6 +10102,7 @@ h6,
 
 .team-item:hover .team-img img {
   transform: scale(1.2);
+  border-radius: 15%;
 }
 
 .team .team-social {
