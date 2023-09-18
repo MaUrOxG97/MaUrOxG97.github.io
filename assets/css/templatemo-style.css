@@ -13,12 +13,24 @@ body {
 }
 
 #page-wraper {
-    background: url(../images/page-bg.jpg) no-repeat center center fixed;
+    background: url(../images/INDEPENDIENTESFONDO.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     width: 100%;
+    position: relative; /* Añade esta línea para que el ::before sea relativo a este elemento */
+}
+
+#page-wraper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Añade opacidad aquí (0.5 para 50%) */
+     /* Añade esto para que el fondo semi-transparente esté detrás del contenido */
 }
 
 
@@ -362,6 +374,12 @@ button:hover {
 
 
 /* Left & Right Post */
+
+
+.center-image{
+    text-align: center;
+    align-items: center;
+}
 
 .right-image-post {
     margin-top: 60px;
@@ -710,7 +728,7 @@ section.contact-me {
     .menu {
         left: 0%;
     }
-
+    
     .right-image-post h4,
     .left-image-post h4 {
         margin-top: 0px;
@@ -736,7 +754,8 @@ section.contact-me {
 @media screen and (max-width: 1280px) and (min-width: 846px) {
     .menu {
         width: 25%;
-    }
+    }    
+
 }
 
 #menu-toggle,
@@ -749,6 +768,7 @@ section.contact-me {
     #menu-close {
         display: inline-block;
     }    
+    
 
     .menu {        
         width: 320px;
@@ -809,3 +829,36 @@ section.contact-me {
         margin-bottom: 20px;
     }
 }
+
+.section-footer{
+    text-align: center;
+    align-items: center;
+    padding-left: 22rem;
+}
+
+.footer-candi img{
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .footer-candi img {
+        max-width: 100%; /* La imagen se ajustará al ancho de su contenedor */
+        height: auto; /* Mantendrá la proporción de aspecto original de la imagen */
+    }
+}
+
+footer-candi{
+    
+}
+
+@media (min-width: 768px) {
+    .footer-candi {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 50%;
+      margin-left: auto; /* Esto centrará el contenido a la derecha */
+        margin-right: 10rem;
+    }
+  }
+
